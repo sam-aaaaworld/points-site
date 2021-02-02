@@ -1,0 +1,114 @@
+header {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 4rem 4rem 4rem;
+}
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.branding-container {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.branding-container h3 {
+    font-size: 1rem;
+}
+.logo {
+    display: grid;
+    place-items: center;
+    border: solid rgb(255, 218, 52) 8px;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-color: yellow;
+}
+.logo h1 {
+    color: rgb(255, 218, 52);
+}
+
+#site-nav {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#site-nav a {
+    font-size: .85rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding: .4rem;
+}
+#site-nav a:hover {
+    text-decoration: underline;
+    font-weight: 600;
+}
+/* #nav-signup {
+    border: solid black 1px;
+    background-color: var(--color--minty);
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+#header-image {
+    width: 50%;
+}
+/* header .row h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+
+} */
+#header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+#header-cta {
+    
+}
+#header-cta h1 {
+    font-size: 2.7rem;
+    font-weight: 400;
+
+}
+#header-cta_buttons {
+    padding-top: 1rem;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: flex-start;
+}
+#header-cta_buttons a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    width: 35%;
+    margin-right: 1.5rem;
+    line-height: 2.4rem;
+    font-size: .8rem;
+    font-weight: 500;
+    background-color: var(--color--minty);
+    border: solid black 1px;
+    box-shadow: -10px 10px #c1f7c0,
+                -11px 11px #000000,
+                -11px 9px #000000,
+                -9px 11px #000000;
+}
