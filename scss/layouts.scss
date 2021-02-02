@@ -1,0 +1,50 @@
+:root {
+    font-size: 24px;
+    font-family: 'Raleway';
+    --color--minty: #85FFA7;
+    --color--pastel-purple: #E8E9F3;
+    --color--pastel-pinkish: #F3E8E8;
+    --color--off-black: #363537;
+    --color--greencirc: #6fff6c7c;
+}
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* FOR SCROLL SNAP */
+html {
+    height: 100vh;
+                overflow: hidden;
+}
+body {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
+    width: 100%;
+    
+    .scroll-snap-target {
+        scroll-snap-align: start;
+    }
+}
+
+#testimonial-block {
+    height: 70vh;
+    width: 100%;
+    background-color: var(--color--pastel-pinkish);
+}
+
+#contact-block {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color--minty);
+}
+
+footer {
+    width: 100%;
+    height: 40vh;
+    background-color: var(--color--off-black);
+}
+
+
