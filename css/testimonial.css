@@ -1,6 +1,6 @@
 #testimonial-block {
     padding: 5rem;
-    height: 80vh;
+    height: 90vh;
     width: 100%;
     background-color: var(--color--pastel-pinkish);
     display: flex;
@@ -22,9 +22,78 @@
     height: 350px;
     width: 40%;
     border: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 1rem 1rem;
 
     box-shadow: -10px 10px #c1c1c1, 
                 -12px 12px #000000,
                 -12px 8px #000000,
                 -8px 12px #000000;
+}
+.testimonial_card .quote {
+    font-weight: 400;
+    width: 100%;
+    z-index: 3;
+    padding: 1rem 2rem;
+    z-index: 3;
+    font-size: 1rem;
+}
+.testimonial_card .quote::before {
+    font-size: 8rem;
+    content: "\"";
+    float: left;
+    line-height: 0;
+    position: relative;
+    top: 2rem;
+    left: -2.5rem;
+    z-index: -1;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.testimonial_card .quote::after {
+    font-size: 7.5rem;
+    content: "\"";
+    float: right;
+    line-height: 0;
+    position: relative;
+    bottom: -4rem;
+    right: -2rem;
+    z-index: -1;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
+}
+.identity {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.image {
+    height: 6rem;
+    width: 6rem;
+    border: solid black 2px;
+    border-radius: 50%;
+}
+.identity .name {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+.identity .name::before {
+    content: "-";
+}
+#image1 {
+    background-image: url("https://images.pexels.com/photos/2078265/pexels-photo-2078265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-size: cover;
+}
+#image2 {
+    background-image: url("https://images.pexels.com/photos/3290234/pexels-photo-3290234.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-size: cover;
 }
