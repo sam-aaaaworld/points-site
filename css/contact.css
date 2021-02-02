@@ -1,0 +1,26 @@
+#contact-block {
+    display: grid;
+    place-items: center;
+
+}
+
+#contact-form {
+    width: 36%;
+    background-color: white;
+    height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    border: solid black 2px;
+    box-shadow: -30px 30px var(--color--minty), 
+                -32px 32px #000000,
+                -32px 28px #000000,
+                -28px 32px #000000;
+
+    padding: 1.5rem 2rem;
+
+
+}
+
