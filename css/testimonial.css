@@ -5,11 +5,15 @@
     background-color: var(--color--pastel-pinkish);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
 }
 #test-header {
-    width: 100%;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-left: 3.7rem;
+    width: 80%;
+    text-align: left;
 }
 #testimonial-container {
     width: 100%;
