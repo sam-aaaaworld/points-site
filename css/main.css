@@ -2,6 +2,7 @@
 @import 'header.css';
 @import 'explainer.css';
 @import 'testimonial.css';
+@import 'contact.css';
 :root {
     font-size: 24px;
     font-family: 'Raleway';
