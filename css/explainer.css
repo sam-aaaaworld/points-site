@@ -29,7 +29,7 @@
     padding: .5rem .2rem;
     background-color: #fff;
     margin: .8rem;
-    width:250px;
+    width:290px;
     height:350px;
     border: solid black 2px;
     box-shadow: -10px 10px #c1c1c1, 
@@ -40,13 +40,20 @@
     flex-direction: column;
     align-items: center;
   }
-  .card-image {
+.card-image {
     width: 80%;
   }
-  .card-header {
+.card-header {
     font-weight: 500;
-    font-size: .85rem;
+    font-size: 1rem;
+    margin-top: .2rem;
+    font-weight: 500;
   }
-  .block:hover {
+.block:hover {
     transform: scale(1.05);
   }
+.block p {
+  padding: .3rem .1rem;
+  text-align: center;
+  font-size: .75rem;
+}
