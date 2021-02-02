@@ -15,13 +15,12 @@
           box-sizing: border-box;
 }
 
-/* FOR SCROLL SNAP */
-html {
+* html {
   height: 100vh;
   overflow: hidden;
 }
 
-body {
+* html body {
   height: 100vh;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
@@ -29,13 +28,7 @@ body {
   width: 100%;
 }
 
-body .scroll-snap-target {
+* html body .scroll-snap-target {
   scroll-snap-align: start;
-}
-
-footer {
-  width: 100%;
-  height: 40vh;
-  background-color: var(--color--off-black);
 }
 /*# sourceMappingURL=layouts.css.map */
