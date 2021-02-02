@@ -1,0 +1,30 @@
+#testimonial-block {
+    padding: 5rem;
+    height: 80vh;
+    width: 100%;
+    background-color: var(--color--pastel-pinkish);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#test-header {
+    width: 100%;
+}
+#testimonial-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.testimonial_card {
+    background-color: white;
+    height: 350px;
+    width: 40%;
+    border: solid black 2px;
+
+    box-shadow: -10px 10px #c1c1c1, 
+                -12px 12px #000000,
+                -12px 8px #000000,
+                -8px 12px #000000;
+}
