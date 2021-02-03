@@ -29,7 +29,7 @@
   width: 100%;
 }
 
-* html body .scroll-snap-target {
+.scroll-snap-target {
   scroll-snap-align: start;
 }
 
