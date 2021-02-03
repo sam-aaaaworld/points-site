@@ -100,28 +100,28 @@ header {
             }
         }
     }
-
     .circle {
-        z-index: -10;
-        background-color: #6FFF6C;
-        width: 100%;
         height: 100vw;
+        width: 100vw;
+        position: fixed;
         border-radius: 50%;
-        position: absolute;
-        top: -120vh;
-        left: -25vw;
+
+    }
+    .circle1 {
+        @extend .circle;
+        background-color: #6FFF6C;
+        z-index: -10;
+        top: -110vh;
+        left: -20vw;
         opacity: .3;
     }
     
     .circle2 {
+        @extend .circle;
+        background-color: #d1d1d16e;
         z-index: -20;
-        background-color: #d1d1d1;
-        width: 100%;
-        height: 100vw;
-        border-radius: 50%;
-        position: absolute;
-        top: -125vh;
-        left: -40vw;
+        top: -110vh;
+        left: -30vw;
     }
 }
 
