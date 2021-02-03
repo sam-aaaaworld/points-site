@@ -1,15 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,500;0,900;1,200&display=swap");
 :root {
   font-size: 24px;
-  font-family: 'Raleway';
-  --color--minty: #CEFFDC;
-  --color--pastel-purple: #E8E9F3;
-  --color--pastel-pinkish: #F3E8E8;
-  --color--off-black: #363537;
-  --color--greencirc: #6fff6c7c;
 }
 
 * {
+  font-family: "Raleway";
   padding: 0px;
   margin: 0px;
   -webkit-box-sizing: border-box;
@@ -25,12 +20,34 @@
   height: 100vh;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
-  overflow: scroll;
+  overflow: overlay;
   width: 100%;
 }
 
 * html body .scroll-snap-target {
   scroll-snap-align: start;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+  width: 8px;
+  border: none;
+}
+
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner,
+::-webkit-resizer {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background: #CACACA;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #363537;
 }
 
 header {
@@ -170,7 +187,7 @@ header #header-content_cta-buttons a {
   line-height: 2.4rem;
   font-size: .8rem;
   font-weight: 500;
-  background-color: var(--color--minty);
+  background-color: #CEFFDC;
   border: solid black 1px;
   -webkit-box-shadow: -10px 10px #c1f7c0, -11px 11px #000000, -11px 9px #000000, -9px 11px #000000;
           box-shadow: -10px 10px #c1f7c0, -11px 11px #000000, -11px 9px #000000, -9px 11px #000000;
@@ -202,7 +219,7 @@ header .circle2 {
   padding: 5rem 0 5rem 0;
   height: 80vh;
   width: 100%;
-  background-color: var(--color--pastel-purple);
+  background-color: #E8E9F3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,7 +311,7 @@ header .circle2 {
   padding: 5rem;
   height: 100vh;
   width: 100%;
-  background-color: var(--color--pastel-pinkish);
+  background-color: #F3E8E8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -459,8 +476,8 @@ header .circle2 {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 2rem 2.5rem;
-  -webkit-box-shadow: -30px 30px var(--color--minty), -31px 29px #000000, -31px 31px #000000, -29px 31px #000000;
-          box-shadow: -30px 30px var(--color--minty), -31px 29px #000000, -31px 31px #000000, -29px 31px #000000;
+  -webkit-box-shadow: -30px 30px #CEFFDC, -31px 29px #000000, -31px 31px #000000, -29px 31px #000000;
+          box-shadow: -30px 30px #CEFFDC, -31px 29px #000000, -31px 31px #000000, -29px 31px #000000;
 }
 
 #contact-block_form h2 {
@@ -529,8 +546,8 @@ header .circle2 {
 
 footer {
   width: 100%;
-  height: 40vh;
-  background-color: var(--color--off-black);
+  height: 45vh;
+  background-color: #363537;
   padding-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -605,7 +622,7 @@ footer .footer-content_container nav a:hover {
 
 footer #bottom_bar {
   width: 100%;
-  height: 4rem;
+  height: 2rem;
   background-color: #222229;
   margin-top: auto;
   display: -webkit-box;
@@ -618,14 +635,15 @@ footer #bottom_bar {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   color: white;
   padding: 0 3rem;
 }
 
 footer #bottom_bar p {
   size: .7rem;
+  margin-bottom: .3rem;
 }
 /*# sourceMappingURL=root.css.map */

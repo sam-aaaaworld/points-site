@@ -1,17 +1,10 @@
 :root {
     font-size: 24px;
-    font-family: 'Raleway';
-    --color--minty: #CEFFDC;
-    --color--pastel-purple: #E8E9F3;
-    --color--pastel-pinkish: #F3E8E8;
-    --color--off-black: #363537;
-    --color--greencirc: #6fff6c7c;
 }
-$mint: #CEFFDC;
 
-$inputText: #6b6b6b; 
 
 * {
+    font-family: $mainFont;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -23,7 +16,7 @@ $inputText: #6b6b6b;
         body {
             height: 100vh;
             scroll-snap-type: y mandatory;
-            overflow: scroll;
+            overflow: overlay;
             width: 100%;
             
             .scroll-snap-target {
@@ -36,3 +29,25 @@ $inputText: #6b6b6b;
 
 
 
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+    width: 8px;
+    border: none;
+
+}
+
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner,
+::-webkit-resizer {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background: #CACACA;
+
+}
+::-webkit-scrollbar-track {
+    background-color: $offBlack;
+}
