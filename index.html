@@ -8,7 +8,7 @@
   </head>
   <body>
 
-  <!-- HEADER -->
+    <!-- HEADER -->
     <header class="scroll-snap-target">
         <section class="top-bar">
             <div class="top-bar_branding-container">
@@ -19,9 +19,11 @@
             </div>
 
             <nav id="site-nav">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">F.A.Q.</a>
+                <!-- <a href="#">Home</a> -->
+                <a href="#explainer-block">About</a>
+                <a href="#testimonial-block">Testimonials</a>
+                <a href="#contact-block">Contact</a>
+                <!-- <a href="#">F.A.Q.</a> -->
                 <a href="#">Login</a>
                 <a id="nav-signup" href="#">Sign Up</a>
             </nav>
@@ -33,21 +35,21 @@
             <h1 id="header-content_cta-texts">Earn:<br>Points, Miles,<br>Rewards and Cash</h1>
             
             <div id="header-content_cta-buttons">
-              <a href="#">Learn How</a>
+              <a href="#explainer-block">Learn How</a>
               <a href="#">Join Now!</a>
             </div>
           </div>
           <img id="header-content_cta-image" src="/assets/header image.png" alt="">
         </section>
 
-        <div class="circle"></div>
-        <div class="circle circle2"></div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
     </header> 
   
     <!-- EXPLAINER -->
     <section class="scroll-snap-target" id="explainer-block">
       <div id="explainer-block_header">
-        <p id="explainer-block_header-small">How It Works:</p>
+        <p id="small">How It Works:</p>
         <p>Our process is designed to be transparent, trustworthy and easy from the jump.</p>
       </div>
         <div class="container">
@@ -76,8 +78,8 @@
             </section>
           </div>
     </section>
-  
-  <!-- Testimonial Block -->
+
+    <!-- Testimonial Block -->
     <section class="scroll-snap-target" id="testimonial-block">
       <h2 id="testimonial-block_header">What Our Members Say:</h2>
 
@@ -115,18 +117,24 @@
         </section>
       </section>
     </section>
-<!-- Contact Section -->
+
+    <!-- Contact Section -->
     <section class="scroll-snap-target" id="contact-block">
       <form id="contact-block_form" action="#">
         <h2>Contact Us</h2>
-        <label for="firstname">
-          First Name:
-        </label>
-        <input type="text" name="name" id="">
-        <label for="lastname">
-          Last Name:
-        </label>
-        <input type="text" name="lastname" id="">
+        <div class="name-container">
+          <div class="name-container-block">
+            <label for="firstname">First Name:</label>
+            <input type="text" name="name" id="">
+          </div>
+          
+          <div class="name-container-block">
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lastname" id="">
+          </div>
+
+        </div>
+
         <label for="email">
           Email:
         </label>
@@ -142,7 +150,8 @@
 
 
     </section>
-  
+
+
     <footer class="scroll-snap-target">
       <section class="footer-content_container">
         <div class="footer-content_container--branding">
@@ -151,18 +160,16 @@
         </div>
 
         <nav>
-          <a href="#">About Us</a>
-          <a href="#">How it Works</a>
-          <a href="#">FAQ</a>
+          <a href="#explainer-block">How it Works</a>
+          <a href="#">Contact</a>
         </nav>
         <nav>
           <a href="#">Terms of Service</a>
           <a href="#">Privacy Policy</a>
-          <a href="#">Contact</a>
         </nav>
         <nav>
-          <a href="#">Login</a>
           <a href="#">Sign Up</a>
+          <a href="#">Login</a>
         </nav>
       </section>
 

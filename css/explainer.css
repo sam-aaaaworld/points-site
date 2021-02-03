@@ -1,5 +1,5 @@
 #explainer-block {
-  padding-top: 5rem;
+  padding: 5rem 0 5rem 0;
   height: 80vh;
   width: 100%;
   background-color: var(--color--pastel-purple);
@@ -23,22 +23,28 @@
 
 #explainer-block_header p {
   font-weight: 500;
+  font-size: 1.3rem;
 }
 
-#explainer-block_header-small {
+#explainer-block_header #small {
+  font-weight: 800;
   font-size: .75rem;
 }
 
 #explainer-block .container {
   width: 80%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #explainer-block .container .card {
@@ -46,7 +52,7 @@
   background-color: #fff;
   margin: .8rem;
   width: 290px;
-  height: 360px;
+  height: 400px;
   border: solid black 2px;
   -webkit-box-shadow: -10px 10px #c1c1c1,  -12px 12px #000000, -12px 8px #000000, -8px 12px #000000;
           box-shadow: -10px 10px #c1c1c1,  -12px 12px #000000, -12px 8px #000000, -8px 12px #000000;
@@ -64,23 +70,23 @@
 
 #explainer-block .container .card-image {
   width: 80%;
+  margin-bottom: 1rem;
 }
 
 #explainer-block .container .card-header {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
-  margin-top: .2rem;
   font-weight: 500;
 }
 
 #explainer-block .container .card p {
-  padding: .3rem .1rem;
+  padding: .4rem .1rem 0 .1rem;
   text-align: center;
   font-size: .75rem;
 }
 
 #explainer-block .container .card:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
 }
 /*# sourceMappingURL=explainer.css.map */

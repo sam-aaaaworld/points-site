@@ -1,15 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,500;0,900;1,200&display=swap");
 :root {
   font-size: 24px;
-  font-family: 'Raleway';
-  --color--minty: #85FFA7;
-  --color--pastel-purple: #E8E9F3;
-  --color--pastel-pinkish: #F3E8E8;
-  --color--off-black: #363537;
-  --color--greencirc: #6fff6c7c;
 }
 
 * {
+  font-family: "Raleway";
   padding: 0px;
   margin: 0px;
   -webkit-box-sizing: border-box;
@@ -25,12 +20,34 @@
   height: 100vh;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
-  overflow: scroll;
+  overflow: overlay;
   width: 100%;
 }
 
 .scroll-snap-target {
   scroll-snap-align: start;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+  width: 8px;
+  border: none;
+}
+
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner,
+::-webkit-resizer {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background: #CACACA;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #363537;
 }
 
 header {
@@ -170,40 +187,39 @@ header #header-content_cta-buttons a {
   line-height: 2.4rem;
   font-size: .8rem;
   font-weight: 500;
-  background-color: var(--color--minty);
+  background-color: #CEFFDC;
   border: solid black 1px;
   -webkit-box-shadow: -10px 10px #c1f7c0, -11px 11px #000000, -11px 9px #000000, -9px 11px #000000;
           box-shadow: -10px 10px #c1f7c0, -11px 11px #000000, -11px 9px #000000, -9px 11px #000000;
 }
 
-header .circle {
-  z-index: -10;
-  background-color: #6FFF6C;
-  width: 100%;
+header .circle, header .circle1, header .circle2 {
   height: 100vw;
+  width: 100vw;
+  position: fixed;
   border-radius: 50%;
-  position: absolute;
-  top: -120vh;
-  left: -25vw;
+}
+
+header .circle1 {
+  background-color: #6FFF6C;
+  z-index: -10;
+  top: -110vh;
+  left: -20vw;
   opacity: .3;
 }
 
 header .circle2 {
+  background-color: #d1d1d16e;
   z-index: -20;
-  background-color: #d1d1d1;
-  width: 100%;
-  height: 100vw;
-  border-radius: 50%;
-  position: absolute;
-  top: -125vh;
-  left: -40vw;
+  top: -110vh;
+  left: -30vw;
 }
 
 #explainer-block {
-  padding-top: 5rem;
+  padding: 5rem 0 5rem 0;
   height: 80vh;
   width: 100%;
-  background-color: var(--color--pastel-purple);
+  background-color: #E8E9F3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -224,22 +240,28 @@ header .circle2 {
 
 #explainer-block_header p {
   font-weight: 500;
+  font-size: 1.3rem;
 }
 
-#explainer-block_header-small {
+#explainer-block_header #small {
+  font-weight: 800;
   font-size: .75rem;
 }
 
 #explainer-block .container {
   width: 80%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #explainer-block .container .card {
@@ -247,7 +269,7 @@ header .circle2 {
   background-color: #fff;
   margin: .8rem;
   width: 290px;
-  height: 360px;
+  height: 400px;
   border: solid black 2px;
   -webkit-box-shadow: -10px 10px #c1c1c1,  -12px 12px #000000, -12px 8px #000000, -8px 12px #000000;
           box-shadow: -10px 10px #c1c1c1,  -12px 12px #000000, -12px 8px #000000, -8px 12px #000000;
@@ -265,31 +287,31 @@ header .circle2 {
 
 #explainer-block .container .card-image {
   width: 80%;
+  margin-bottom: 1rem;
 }
 
 #explainer-block .container .card-header {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
-  margin-top: .2rem;
   font-weight: 500;
 }
 
 #explainer-block .container .card p {
-  padding: .3rem .1rem;
+  padding: .4rem .1rem 0 .1rem;
   text-align: center;
   font-size: .75rem;
 }
 
 #explainer-block .container .card:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
 }
 
 #testimonial-block {
   padding: 5rem;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
-  background-color: var(--color--pastel-pinkish);
+  background-color: #F3E8E8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,12 +319,12 @@ header .circle2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 
 #testimonial-block_header {
@@ -315,6 +337,7 @@ header .circle2 {
 
 #testimonial-block_container {
   width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,11 +348,14 @@ header .circle2 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .testimonial_card {
   background-color: white;
-  height: 350px;
+  height: 400px;
   width: 40%;
   border: solid black 2px;
   display: -webkit-box;
@@ -343,8 +369,8 @@ header .circle2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem 1rem;
-  -webkit-box-shadow: -10px 10px #c1c1c1,  -12px 12px #000000, -12px 8px #000000, -8px 12px #000000;
-          box-shadow: -10px 10px #c1c1c1,  -12px 12px #000000, -12px 8px #000000, -8px 12px #000000;
+  -webkit-box-shadow: -20px 20px #c1c1c1,  -22px 22px #000000, -22px 18px #000000, -18px 22px #000000;
+          box-shadow: -20px 20px #c1c1c1,  -22px 22px #000000, -22px 18px #000000, -18px 22px #000000;
 }
 
 .testimonial_card-quote {
@@ -352,12 +378,12 @@ header .circle2 {
   width: 100%;
   z-index: 3;
   padding: 1rem 2rem;
-  z-index: 3;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .testimonial_card-quote::before {
-  font-size: 8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7rem;
   content: "\"";
   float: left;
   line-height: 0;
@@ -367,12 +393,13 @@ header .circle2 {
   z-index: -1;
   -webkit-text-fill-color: white;
   /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: black;
 }
 
 .testimonial_card-quote::after {
-  font-size: 7.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7rem;
   content: "\"";
   float: right;
   line-height: 0;
@@ -382,7 +409,7 @@ header .circle2 {
   z-index: -1;
   -webkit-text-fill-color: white;
   /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: black;
 }
 
@@ -417,8 +444,8 @@ header .circle2 {
 }
 
 .testimonial_card-identity .name {
-  font-weight: 500;
-  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
 .testimonial_card-identity .name::before {
@@ -428,18 +455,19 @@ header .circle2 {
 #contact-block {
   height: 100vh;
   width: 100%;
-  background-color: var(--color--minty);
+  background-color: #CEFFDC;
   display: -ms-grid;
   display: grid;
   place-items: center;
 }
 
 #contact-block_form {
-  border: solid black 2px;
+  font-family: 'Raleway';
+  border: solid black 1px;
   background-color: white;
   width: 35%;
   min-width: 500px;
-  height: 60vh;
+  height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,31 +476,67 @@ header .circle2 {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 2rem 2.5rem;
-  -webkit-box-shadow: -30px 30px var(--color--minty), -32px 28px #000000, -32px 32px #000000, -28px 32px #000000;
-          box-shadow: -30px 30px var(--color--minty), -32px 28px #000000, -32px 32px #000000, -28px 32px #000000;
+  -webkit-box-shadow: -30px 30px #CEFFDC, -31px 29px #000000, -31px 31px #000000, -29px 31px #000000;
+          box-shadow: -30px 30px #CEFFDC, -31px 29px #000000, -31px 31px #000000, -29px 31px #000000;
 }
 
 #contact-block_form h2 {
   font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+#contact-block_form .name-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contact-block_form .name-container :first-child {
+  padding-right: .5rem;
+}
+
+#contact-block_form .name-container-block {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 .3rem 0 0;
 }
 
 #contact-block_form label {
-  font-size: .7rem;
-  margin-top: .7rem;
+  font-weight: 400;
+  font-size: .6rem;
+  margin-top: 1rem;
   margin-bottom: .2rem;
 }
 
+#contact-block_form textarea {
+  padding: .5rem;
+  color: #6b6b6b;
+}
+
+#contact-block_form input {
+  font-family: inherit;
+}
+
 #contact-block_form input[type=text], #contact-block_form input[type=email] {
-  height: 1.3rem;
+  color: #6b6b6b;
+  height: 2rem;
+  padding-left: .5rem;
 }
 
 #contact-block_form input[type=submit] {
-  font-size: .7rem;
-  font-weight: 100;
-  height: 1.5rem;
+  font-size: .6rem;
+  font-weight: 400;
+  height: 2rem;
   width: 8rem;
   background-color: white;
   border: solid black 1px;
+  margin-top: .5rem;
 }
 
 #contact-block_form input[type=submit]:hover {
@@ -482,8 +546,8 @@ header .circle2 {
 
 footer {
   width: 100%;
-  height: 40vh;
-  background-color: var(--color--off-black);
+  height: 45vh;
+  background-color: #363537;
   padding-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -558,7 +622,7 @@ footer .footer-content_container nav a:hover {
 
 footer #bottom_bar {
   width: 100%;
-  height: 4rem;
+  height: 2rem;
   background-color: #222229;
   margin-top: auto;
   display: -webkit-box;
@@ -571,14 +635,15 @@ footer #bottom_bar {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   color: white;
   padding: 0 3rem;
 }
 
 footer #bottom_bar p {
   size: .7rem;
+  margin-bottom: .3rem;
 }
 /*# sourceMappingURL=root.css.map */
