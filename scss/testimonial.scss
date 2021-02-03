@@ -62,7 +62,7 @@
             left: -2.5rem;
             z-index: -1;
             -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-width: 3px;
             -webkit-text-stroke-color: black;
         }
         &::after {
@@ -76,7 +76,7 @@
             right: -2rem;
             z-index: -1;
             -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-width: 3px;
             -webkit-text-stroke-color: black;
         }
     }
@@ -102,8 +102,8 @@
             background-image: url("https://images.pexels.com/photos/3290234/pexels-photo-3290234.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
         }
         .name {
-            font-weight: 500;
-            font-size: 1.4rem;
+            font-weight: 600;
+            font-size: 1.5rem;
             
             &::before {
                 content: "-";
