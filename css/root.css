@@ -338,7 +338,7 @@ header .circle2 {
 
 .testimonial_card {
   background-color: white;
-  height: 350px;
+  height: 400px;
   width: 40%;
   border: solid black 2px;
   display: -webkit-box;
@@ -352,8 +352,8 @@ header .circle2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem 1rem;
-  -webkit-box-shadow: -10px 10px #c1c1c1,  -12px 12px #000000, -12px 8px #000000, -8px 12px #000000;
-          box-shadow: -10px 10px #c1c1c1,  -12px 12px #000000, -12px 8px #000000, -8px 12px #000000;
+  -webkit-box-shadow: -20px 20px #c1c1c1,  -22px 22px #000000, -22px 18px #000000, -18px 22px #000000;
+          box-shadow: -20px 20px #c1c1c1,  -22px 22px #000000, -22px 18px #000000, -18px 22px #000000;
 }
 
 .testimonial_card-quote {
@@ -361,12 +361,12 @@ header .circle2 {
   width: 100%;
   z-index: 3;
   padding: 1rem 2rem;
-  z-index: 3;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .testimonial_card-quote::before {
-  font-size: 8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7rem;
   content: "\"";
   float: left;
   line-height: 0;
@@ -376,12 +376,13 @@ header .circle2 {
   z-index: -1;
   -webkit-text-fill-color: white;
   /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
 }
 
 .testimonial_card-quote::after {
-  font-size: 7.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7rem;
   content: "\"";
   float: right;
   line-height: 0;
@@ -391,7 +392,7 @@ header .circle2 {
   z-index: -1;
   -webkit-text-fill-color: white;
   /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
 }
 
@@ -444,11 +445,12 @@ header .circle2 {
 }
 
 #contact-block_form {
-  border: solid black 2px;
+  font-family: 'Raleway';
+  border: solid black 1px;
   background-color: white;
-  width: 35%;
+  width: 40%;
   min-width: 500px;
-  height: 60vh;
+  height: 65%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -457,12 +459,34 @@ header .circle2 {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 2rem 2.5rem;
-  -webkit-box-shadow: -30px 30px var(--color--minty), -32px 28px #000000, -32px 32px #000000, -28px 32px #000000;
-          box-shadow: -30px 30px var(--color--minty), -32px 28px #000000, -32px 32px #000000, -28px 32px #000000;
+  -webkit-box-shadow: -30px 30px var(--color--minty), -31px 29px #000000, -31px 31px #000000, -29px 31px #000000;
+          box-shadow: -30px 30px var(--color--minty), -31px 29px #000000, -31px 31px #000000, -29px 31px #000000;
 }
 
 #contact-block_form h2 {
   font-weight: 400;
+}
+
+#contact-block_form .name-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contact-block_form .name-container :first-child {
+  padding-right: .5rem;
+}
+
+#contact-block_form .name-container-block {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 .3rem 0 0;
 }
 
 #contact-block_form label {
@@ -471,8 +495,19 @@ header .circle2 {
   margin-bottom: .2rem;
 }
 
+#contact-block_form textarea {
+  padding: .5rem;
+  color: #6b6b6b;
+}
+
+#contact-block_form input {
+  font-family: inherit;
+  color: #6b6b6b;
+}
+
 #contact-block_form input[type=text], #contact-block_form input[type=email] {
-  height: 1.3rem;
+  height: 1.8rem;
+  padding-left: .5rem;
 }
 
 #contact-block_form input[type=submit] {

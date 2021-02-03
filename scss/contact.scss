@@ -6,11 +6,12 @@
     place-items: center;
 
     &_form {
-        border: solid black 2px;
+        font-family: 'Raleway';
+        border: solid black 1px;
         background-color: white;
-        width: 35%;
+        width: 40%;
         min-width: 500px;
-        height: 60vh;
+        height: 65%;
 
         display: flex;
         flex-direction: column;
@@ -18,12 +19,26 @@
         padding: 2rem 2.5rem;
 
         box-shadow: -30px 30px var(--color--minty), 
-                      -32px 28px #000000,
-                      -32px 32px #000000,
-                      -28px 32px #000000;
+                      -31px 29px #000000,
+                      -31px 31px #000000,
+                      -29px 31px #000000;
         
         h2 {
             font-weight: 400;
+        }
+
+        .name-container {
+            display: flex;
+            
+            :first-child {
+                padding-right: .5rem;
+            }
+            &-block {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                padding: 0 .3rem 0 0;
+            }
         }
 
         label {
@@ -32,10 +47,18 @@
             margin-bottom: .2rem;
         }
 
+        textarea {
+            padding: .5rem;
+            color: $inputText;
+        }
+        
         input {
+            font-family: inherit;
+            color: #6b6b6b;
             &[type=text], 
             &[type=email]  {
-                height: 1.3rem;
+                height: 1.8rem;
+                padding-left: .5rem;
             }
             &[type=submit] {
                 font-size: .7rem;

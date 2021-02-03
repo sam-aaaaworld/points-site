@@ -8,7 +8,7 @@
   </head>
   <body>
 
-  <!-- HEADER -->
+    <!-- HEADER -->
     <header class="scroll-snap-target">
         <section class="top-bar">
             <div class="top-bar_branding-container">
@@ -76,7 +76,8 @@
             </section>
           </div>
     </section>
-  <!-- Testimonial Block -->
+
+    <!-- Testimonial Block -->
     <section class="scroll-snap-target" id="testimonial-block">
       <h2 id="testimonial-block_header">What Our Members Say:</h2>
 
@@ -114,18 +115,24 @@
         </section>
       </section>
     </section>
-<!-- Contact Section -->
+
+    <!-- Contact Section -->
     <section class="scroll-snap-target" id="contact-block">
       <form id="contact-block_form" action="#">
         <h2>Contact Us</h2>
-        <label for="firstname">
-          First Name:
-        </label>
-        <input type="text" name="name" id="">
-        <label for="lastname">
-          Last Name:
-        </label>
-        <input type="text" name="lastname" id="">
+        <div class="name-container">
+          <div class="name-container-block">
+            <label for="firstname">First Name:</label>
+            <input type="text" name="name" id="">
+          </div>
+          
+          <div class="name-container-block">
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lastname" id="">
+          </div>
+
+        </div>
+
         <label for="email">
           Email:
         </label>
