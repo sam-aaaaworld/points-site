@@ -9,9 +9,9 @@
         font-family: 'Raleway';
         border: solid black 1px;
         background-color: white;
-        width: 40%;
+        width: 35%;
         min-width: 500px;
-        height: 65%;
+        height: 70%;
 
         display: flex;
         flex-direction: column;
@@ -25,6 +25,7 @@
         
         h2 {
             font-weight: 400;
+            margin-bottom: 1rem;
         }
 
         .name-container {
@@ -42,8 +43,9 @@
         }
 
         label {
-            font-size: .7rem;
-            margin-top: .7rem;
+            font-weight: 400;
+            font-size: .6rem;
+            margin-top: 1rem;
             margin-bottom: .2rem;
         }
 
@@ -54,19 +56,21 @@
         
         input {
             font-family: inherit;
-            color: #6b6b6b;
+            
             &[type=text], 
             &[type=email]  {
-                height: 1.8rem;
+                color: $inputText;
+                height: 2rem;
                 padding-left: .5rem;
             }
             &[type=submit] {
                 font-size: .7rem;
-                font-weight: 100;
-                height: 1.5rem;
+                font-weight: 200;
+                height: 2rem;
                 width: 8rem;
                 background-color: white;
                 border: solid black 1px;
+                margin-top: .5rem;
 
                 &:hover {
                     background-color: black;
