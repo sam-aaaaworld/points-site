@@ -3,4 +3,23 @@ $purple: #E8E9F3;
 $pink: #F3E8E8;
 $offBlack: #363537;
 $inputText: #6b6b6b; 
-$mainFont : 'Raleway'
+$mainFont : 'Raleway';
+
+@mixin breakpoint($point) {
+    @if $point == desktop {
+      @media (min-width: 70em) { @content ; }
+   }
+    @else if $point == laptop {
+      @media (min-width: 64em) { @content ; }
+   }
+     @else if $point == tablet {
+      @media (max-width: 750px) { @content ; }
+   }
+    @else if $point == phablet {
+      @media (min-width: 37.5em)  { @content ; }
+   }
+   @else if $point == mobileonly {
+      @media (max-width: 37.5em)  { @content ; }
+ 
+   }
+}
