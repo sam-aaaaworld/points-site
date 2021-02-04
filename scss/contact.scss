@@ -6,6 +6,8 @@
     place-items: center;
 
     &_form {
+        @include breakpoint(med) {width: 80%;}
+        @include breakpoint(tablet) {box-shadow: none;}
         font-family: 'Raleway';
         border: solid black 1px;
         background-color: white;

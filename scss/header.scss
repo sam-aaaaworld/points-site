@@ -13,7 +13,6 @@ header {
         background-color: $mint;
     }
 
-
     .top-bar {
         display: flex;
         flex-direction: row;
@@ -27,6 +26,7 @@ header {
             align-items: center;
 
             @include breakpoint(tablet) {width: 30%;}
+            @include breakpoint(med) { width: 35%;}
             
             h3 {
                 font-size: 1rem;
@@ -60,15 +60,18 @@ header {
             flex-direction: row;
             justify-content: space-between;
 
+           @include breakpoint(med) { display:none;}
            @include breakpoint(tablet) {display: none;}
-            
-            a {
-                font-size: .85rem;
-                text-decoration: none;
-                color: black;
-                font-weight: 500;
-                padding: .4rem;
-    
+           
+           a {
+               font-size: .85rem;
+               text-decoration: none;
+               color: black;
+               font-weight: 500;
+               padding: .4rem;
+               
+               @include breakpoint(med) { font-size: .6rem;}
+
                 &:hover {
                     text-decoration: underline;
                     font-weight: 600;
@@ -87,9 +90,16 @@ header {
             height: 100%;
             flex-direction: column;
             flex-flow: column-reverse;
+            padding-top: 25%;
+        }
+
+        @include breakpoint(med) { 
+            height: 100%;
         }
         
         &_cta {
+            @include breakpoint(med) {
+            }
             &-image {
                 width: 50%;
                 @include breakpoint(tablet) {width: 80%;}
@@ -101,6 +111,9 @@ header {
                 @include breakpoint(tablet) {
                     font-size: 1rem;
                     display: none;
+                }
+                @include breakpoint(med) {
+                    font-size: 1.7rem;
                 }
                 
                 &--alt {
@@ -142,6 +155,14 @@ header {
                                 -11px 9px #000000,
                                 -9px 11px #000000;
                     }
+                    @include breakpoint(med) { 
+                        font-size: .7rem;
+                        width: 50%;
+                        box-shadow: -10px 10px $offBlack,
+                                -11px 11px #000000,
+                                -11px 9px #000000,
+                                -9px 11px #000000;
+                    }
 
                 }
             }
@@ -154,6 +175,10 @@ header {
         border-radius: 50%;
 
         @include breakpoint(tablet) { display: none}
+        @include breakpoint(med) { 
+            width: 70rem;
+            height: 70rem;
+        }
 
     }
     .circle1 {
@@ -164,6 +189,12 @@ header {
         left: -20vw;
         opacity: .3;
 
+        @include breakpoint(med) {
+            top: -80%;
+            left: -50%;
+    
+        }
+
     }
     
     .circle2 {
@@ -172,6 +203,12 @@ header {
         z-index: -20;
         top: -110vh;
         left: -30vw;
+
+        @include breakpoint(med) {
+            top: -90%;
+            left: -70%;
+    
+        }
     }
 }
 

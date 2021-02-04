@@ -18,6 +18,8 @@
             scroll-snap-type: y mandatory;
             overflow: overlay;
             width: 100%;
+
+            @include breakpoint(table) {overflow: hidden;}
             
         }
     }
