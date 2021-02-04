@@ -8,9 +8,8 @@
     justify-content: space-between;
     align-items: left;
 
-    @include breakpoint(tablet) {
-        height: 100%;
-    }
+    @include breakpoint(tablet) { height: 100%;}
+    @include breakpoint(med) { height: 100%;}
     
     &_header {
         font-size: 2rem;
@@ -19,8 +18,13 @@
         width: 80%;
         text-align: left;
 
-        @include breakpoint(tablet) { 
+        @include breakpoint(tablet) {
+            width: 100%;
+            font-size: 2rem; 
             margin: 0;
+            padding-bottom: 2rem;
+        }
+        @include breakpoint(med) { 
             padding-bottom: 2rem;
         }
     }
@@ -33,9 +37,8 @@
         justify-content: space-evenly;
         align-items: center;
 
-        @include breakpoint(tablet) {
-            flex-direction: column;
-        }
+        @include breakpoint(tablet) { flex-direction: column;}
+        @include breakpoint(med) { flex-direction: column;}
     }
 }
 
@@ -60,6 +63,13 @@
         width: 90%;
         min-width: 400px;
         height: 300px;
+    }
+    @include breakpoint(med) {
+        margin-bottom: 3rem;
+        width: 90%;
+        min-width: 400px;
+        max-width: 600px;
+        height: 400px;
     }
 
 

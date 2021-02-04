@@ -6,20 +6,10 @@ $inputText: #6b6b6b;
 $mainFont : 'Raleway';
 
 @mixin breakpoint($point) {
-    @if $point == desktop {
-      @media (min-width: 70em) { @content ; }
+   @if $point == med {
+      @media (max-width: 1500px) and (min-width: 750px) { @content ; }
    }
-    @else if $point == laptop {
-      @media (min-width: 64em) { @content ; }
-   }
-     @else if $point == tablet {
+   @else if $point == tablet {
       @media (max-width: 750px) { @content ; }
-   }
-    @else if $point == phablet {
-      @media (min-width: 37.5em)  { @content ; }
-   }
-   @else if $point == mobileonly {
-      @media (max-width: 37.5em)  { @content ; }
- 
    }
 }

@@ -7,9 +7,8 @@
     flex-direction: column;
     align-items: center;
 
-    @include breakpoint(tablet) {
-        height: 100%;
-    }
+    @include breakpoint(tablet) {height: 100%;}
+    @include breakpoint(med) {height: 100%;}
     
     &_header {
         padding-bottom: 2rem;
@@ -55,9 +54,8 @@
           flex-direction: column;
           align-items: center;
 
-          @include breakpoint(tablet) {
-              margin: 1rem;
-          }
+          @include breakpoint(tablet) {margin: 1rem;}
+          @include breakpoint(med) {margin: 1.5rem;}
           
           &-image {
               width: 80%;
