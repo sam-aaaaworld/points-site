@@ -7,6 +7,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: left;
+
+    @include breakpoint(tablet) {
+        height: 100%;
+    }
     
     &_header {
         font-size: 2rem;
@@ -14,6 +18,11 @@
         margin-left: 3.7rem;
         width: 80%;
         text-align: left;
+
+        @include breakpoint(tablet) { 
+            margin: 0;
+            padding-bottom: 2rem;
+        }
     }
     
     &_container {
@@ -23,6 +32,10 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
+
+        @include breakpoint(tablet) {
+            flex-direction: column;
+        }
     }
 }
 
@@ -36,13 +49,20 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     padding: 1rem 1rem;
-
     box-shadow: -20px 20px #c1c1c1, 
                 -22px 22px #000000,
                 -22px 18px #000000,
                 -18px 22px #000000;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 3rem;
+        width: 90%;
+        min-width: 400px;
+        height: 300px;
+    }
+
+
     
     &-quote {
         font-weight: 400;
@@ -50,6 +70,10 @@
         z-index: 3;
         padding: 1rem 2rem;
         font-size: 1.3rem;
+
+        @include breakpoint(tablet) {
+            font-size: .85rem;
+        }
         
         &::before {
             font-family: Arial, Helvetica, sans-serif;
@@ -64,6 +88,12 @@
             -webkit-text-fill-color: white; /* Will override color (regardless of order) */
             -webkit-text-stroke-width: 3px;
             -webkit-text-stroke-color: black;
+            
+            @include breakpoint(tablet) {
+                top: 1rem;
+                font-size: 5rem;
+            }
+            
         }
         &::after {
             font-family: Arial, Helvetica, sans-serif;
@@ -78,6 +108,11 @@
             -webkit-text-fill-color: white; /* Will override color (regardless of order) */
             -webkit-text-stroke-width: 3px;
             -webkit-text-stroke-color: black;
+
+            @include breakpoint(tablet) {
+                bottom: -2rem;
+                font-size: 5rem;
+            }
         }
     }
 
@@ -86,7 +121,7 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-
+        
         .image {
             height: 6rem;
             width: 6rem;
@@ -94,6 +129,11 @@
             border-radius: 50%;
             background-position: center;
             background-size: cover;
+
+            @include breakpoint(tablet) {
+                height: 4rem;
+                width: 4rem;
+            }
         }
         #image1 {
             background-image: url("https://images.pexels.com/photos/2078265/pexels-photo-2078265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");   
@@ -104,7 +144,11 @@
         .name {
             font-weight: 600;
             font-size: 1.5rem;
-            
+
+            @include breakpoint(tablet) {
+                font-size: 1rem;
+            }
+
             &::before {
                 content: "-";
             }
