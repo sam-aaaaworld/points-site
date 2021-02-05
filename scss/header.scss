@@ -5,7 +5,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem 4rem 4rem 4rem;
+    padding: 1.5rem 4rem 4rem 4rem;
 
     @include breakpoint(tablet) { 
         padding: 2rem;
@@ -20,16 +20,18 @@ header {
         align-items: center;
         
         &_branding-container {
-            width: 15%;
+            width: 15rem;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
 
-            @include breakpoint(tablet) {width: 30%;}
-            @include breakpoint(med) { width: 35%;}
+            // @include breakpoint(tablet) {width: 30%;}
             
             h3 {
                 font-size: 1rem;
+                @include breakpoint(tablet) {
+                    font-size: .8rem;
+                }
             }
             
             .logo {
@@ -40,37 +42,68 @@ header {
                 width: 4rem;
                 border-radius: 50%;
                 background-color: yellow;
+                margin-right: 1rem;
 
+                // @include breakpoint(tablet) {
+                //     height: 2rem;
+                //     width: 2rem;
+                //     border-width: 4px;
+                // }
+                @include breakpoint(med) {
+                    height: 3rem;
+                    width: 3rem;
+                    border-width: 4px;
+                }
                 @include breakpoint(tablet) {
-                    height: 2rem;
-                    width: 2rem;
+                    height: 3rem;
+                    width: 3rem;
                     border-width: 4px;
                 }
 
                 h1 {
                     color: rgb(255, 218, 52);
-                    @include breakpoint(tablet) {font-size: .5rem;}
+                    @include breakpoint(tablet) {font-size: .95rem;}
+                    @include breakpoint(med) {font-size: .5rem;}
                 }
             }
         }
 
         #site-nav {
-            width: 30%;
+            width: 40%;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            justify-content: flex-end;
 
-           @include breakpoint(med) { display:none;}
-           @include breakpoint(tablet) {display: none;}
+            
+            
+            #horizontal-nav {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-content: flex-end;
+                @include breakpoint(tablet) {display: none;}
+                @include breakpoint(med) { display:none;}
+            }
+            
+            #nav-toggle {
+                // display: none;
+                @include breakpoint(lg) {display: none;}
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+            }
+
            
            a {
                font-size: .85rem;
                text-decoration: none;
                color: black;
                font-weight: 500;
-               padding: .4rem;
+            //    padding-right: 3rem;
                
-               @include breakpoint(med) { font-size: .6rem;}
+               @include breakpoint(tablet) { font-size: .6rem;}
 
                 &:hover {
                     text-decoration: underline;
@@ -98,11 +131,11 @@ header {
         }
         
         &_cta {
-            @include breakpoint(med) {
-            }
             &-image {
                 width: 50%;
-                @include breakpoint(tablet) {width: 80%;}
+                @include breakpoint(tablet) {
+                    width: 100%;
+                }
             }
             &-texts {
                 font-size: 2.7rem;
@@ -196,7 +229,6 @@ header {
         }
 
     }
-    
     .circle2 {
         @extend .circle;
         background-color: #d1d1d16e;
