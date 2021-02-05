@@ -11,6 +11,7 @@ header {
         padding: 2rem;
         padding-bottom: 3rem;
         background-color: $mint;
+        padding-top: .7rem;
     }
 
     .top-bar {
@@ -72,8 +73,6 @@ header {
             width: 40%;
             display: flex;
             justify-content: flex-end;
-
-            
             
             #horizontal-nav {
                 width: 100%;
@@ -83,10 +82,55 @@ header {
                 align-content: flex-end;
                 @include breakpoint(tablet) {display: none;}
                 @include breakpoint(med) { display:none;}
+
+                a {
+                    font-size: .85rem;
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 500;
+                    
+                    @include breakpoint(tablet) { font-size: .6rem;}
+     
+                     &:hover {
+                         text-decoration: underline;
+                         font-weight: 600;
+                     }
+                 }
+            }
+
+            #vertical-nav {
+                background-color: white;
+                display: none;
+                float: right;
+                flex-direction: column;
+                justify-content: space-between;
+                border: solid $offBlack 2px;
+                position: fixed;
+                top: 3.5rem;
+                box-shadow: -10px 10px $offBlack,
+                                -11px 11px #000000,
+                                -11px 9px #000000,
+                                -9px 11px #000000;
+                @include breakpoint(med) { top: 4rem;}
+                
+                a{
+                    color: $offBlack;
+                    font-size: .75rem;
+                    text-decoration: none;
+                    padding: .5rem;
+                    width: 10rem;
+                    text-align: left;
+
+                    &:hover {
+                        font-weight: 600;
+                        background-color: $purple;
+                    }
+                }
             }
             
             #nav-toggle {
-                // display: none;
+                float: right;
+                // top: 2.3rem;
                 @include breakpoint(lg) {display: none;}
 
                 &:hover {
@@ -96,20 +140,7 @@ header {
             }
 
            
-           a {
-               font-size: .85rem;
-               text-decoration: none;
-               color: black;
-               font-weight: 500;
-            //    padding-right: 3rem;
-               
-               @include breakpoint(tablet) { font-size: .6rem;}
-
-                &:hover {
-                    text-decoration: underline;
-                    font-weight: 600;
-                }
-            }
+           
         }
     }
 
