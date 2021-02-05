@@ -4,32 +4,28 @@
 
 
 * {
+    box-sizing: border-box;
     font-family: $mainFont;
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
     
     html {
         height: 100vh;
+        width: 100%;
         overflow: hidden;
         
         body {
+            background-color: black;
             height: 100vh;
             scroll-snap-type: y mandatory;
-            overflow: overlay;
-            width: 100%;
+            overflow: hidden;
 
-            @include breakpoint(table) {overflow: hidden;}
-            
+            .scroll-snap-target {
+                scroll-snap-align: start;
+            }
         }
     }
 }
-
-.scroll-snap-target {
-    scroll-snap-align: start;
-}
-
-
 
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-track {
