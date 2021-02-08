@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("JS WORKING")
     let vert = document.getElementById("vertical-nav")
+    
 
     let toggle = document.getElementById("nav-toggle")
     toggle.addEventListener("click", () => {
@@ -8,6 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
         rotateElement(toggle)
         toggleDisplay(vert)
     })
+
+    document.addEventListener("click", (e) => {
+        if (e.target != toggle) {
+            if (vert.style.display === "flex") {
+                toggleDisplay(vert)
+                rotateElement(toggle)
+            }
+        }
+    })
+
 })
 
 
