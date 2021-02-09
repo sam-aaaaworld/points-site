@@ -971,6 +971,10 @@ footer .footer-content_container--branding {
   width: 13%;
 }
 
+footer .footer-content_container--branding #footerLogo {
+  width: 12rem;
+}
+
 footer .footer-content_container--branding .logo-element {
   height: 3rem;
   width: 3rem;
