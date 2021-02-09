@@ -422,7 +422,7 @@ header .circle, header .circle1, header .circle2 {
 }
 
 header .circle1 {
-  background-color: #455A64;
+  background-color: #CEFFDC;
   z-index: -10;
   top: -110vh;
   left: -20vw;

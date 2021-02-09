@@ -253,11 +253,11 @@ header {
     }
     .circle1 {
         @extend .circle;
-        background-color: #6FFF6C;
+        background-color: $mint;
         z-index: -10;
         top: -110vh;
         left: -20vw;
-        opacity: .3;
+        // opacity: .3;
 
         @include breakpoint(med) {
             top: -80%;
