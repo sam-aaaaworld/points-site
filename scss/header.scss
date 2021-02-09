@@ -81,7 +81,7 @@ header {
                 width: 100%;
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: flex-end;
                 align-content: flex-end;
                 @include breakpoint(tablet) {display: none;}
                 @include breakpoint(med) { display:none;}
@@ -91,6 +91,7 @@ header {
                     text-decoration: none;
                     color: black;
                     font-weight: 500;
+                    margin-right: 2rem;
                     
                     @include breakpoint(tablet) { font-size: .6rem;}
      

@@ -184,9 +184,9 @@ header .top-bar #site-nav #horizontal-nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -ms-flex-line-pack: end;
       align-content: flex-end;
 }
@@ -208,6 +208,7 @@ header .top-bar #site-nav #horizontal-nav a {
   text-decoration: none;
   color: black;
   font-weight: 500;
+  margin-right: 2rem;
 }
 
 @media (max-width: 750px) {
