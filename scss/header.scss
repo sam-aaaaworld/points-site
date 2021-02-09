@@ -212,7 +212,7 @@ header {
                     font-weight: 500;
                     background-color: $mint;
                     border: solid black 1px;
-                    box-shadow: -10px 10px #c1f7c0,
+                    box-shadow: -10px 10px $offBlack,
                                 -11px 11px #000000,
                                 -11px 9px #000000,
                                 -9px 11px #000000;
@@ -253,29 +253,39 @@ header {
     }
     .circle1 {
         @extend .circle;
+        height: 100wv;
+        width: 100wv;
+
         background-color: $mint;
         z-index: -10;
-        top: -110vh;
-        left: -20vw;
-        // opacity: .3;
+        top: 25%;
+        left: -50vw;
+        opacity: .8;
 
         @include breakpoint(med) {
-            top: -80%;
-            left: -50%;
+            height: 25wv;
+            width: 25wv;
+            top: 25%;
+            left: -60%;
     
         }
 
     }
     .circle2 {
         @extend .circle;
+
+        width: 60rem;
+        height: 60rem;
         background-color: #d1d1d16e;
         z-index: -20;
-        top: -110vh;
-        left: -30vw;
+        top: -10vh;
+        right: -22%;
 
         @include breakpoint(med) {
-            top: -90%;
-            left: -70%;
+            width: 30rem;
+            height: 30rem;
+            top: -5vh;
+            right: -20%;
     
         }
     }
