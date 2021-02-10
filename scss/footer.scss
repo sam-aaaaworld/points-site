@@ -8,7 +8,7 @@ footer {
     justify-content: space-between;
 
     @include breakpoint(tablet) {
-        height: 30vh;
+        height: 100%;
         padding-top: 2.5rem;
     }
 
@@ -18,27 +18,19 @@ footer {
         display: flex;
         justify-content: space-evenly;
         color:white;
+
         @include breakpoint(tablet) {
+            height: 100%;
             font-size: .7rem;
-        }
-
-        &--branding {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            width: 13%;
-
-            #footerLogo {
-                width: 12rem;
-            }
-
-            .logo-element {
-                height: 3rem;
-                width: 3rem;
-                background-color: white;
-                border-radius: 50%;
-            }
+            justify-content: space-between;
+        }
+        
+        #footerLogo {
+            width: 12rem;
+            @include breakpoint(med) {width: 6rem;}
+            @include breakpoint(tablet) {margin-bottom: 3rem;}
         }
         nav {
             display: flex;
@@ -52,6 +44,10 @@ footer {
 
                 &:hover {
                     text-decoration: underline;
+                }
+                @include breakpoint(tablet) {
+                    margin-bottom: 2rem;
+                    text-align: center;
                 }
             }
         }
@@ -68,6 +64,13 @@ footer {
         color: white;
         padding: 0 3rem;
         font-size: 2rem;
+
+        @include breakpoint(tablet) {
+            flex-direction:column;
+            align-items: center;
+            padding: 1rem 0;
+            height: 100%;
+        }
 
         
         p {
