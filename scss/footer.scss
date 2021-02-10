@@ -28,9 +28,16 @@ footer {
         }
         
         #footerLogo {
-            width: 12rem;
-            @include breakpoint(med) {width: 6rem;}
-            @include breakpoint(tablet) {margin-bottom: 3rem;}
+            // max-width: 40%;
+            object-fit: contain;
+            @include breakpoint(med) {
+                // object-fit: contain;
+                width: 10rem;
+            }
+            @include breakpoint(tablet) {
+                max-width: 60%;
+                margin-bottom: 3rem;
+            }
         }
         nav {
             display: flex;

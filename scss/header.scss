@@ -26,9 +26,11 @@ header {
             justify-content: flex-start;
             align-items: center;
 
-            // @include breakpoint(tablet) {width: 30%;}
             img {
+                object-fit: contain;
                 width: 15rem;
+                @include breakpoint(tablet) {width: 80%;}
+
             }
 
             h3 {

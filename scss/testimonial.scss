@@ -20,7 +20,7 @@
 
         @include breakpoint(tablet) {
             width: 100%;
-            font-size: 2rem; 
+            font-size: 1.5rem; 
             margin: 0;
             padding-bottom: 2rem;
         }
@@ -84,6 +84,12 @@
         @include breakpoint(tablet) {
             font-size: .85rem;
         }
+        @include breakpoint(med) {
+            font-size: 1.25rem;
+        }
+        @include breakpoint(shmedium) {
+            font-size: 1rem;
+        }
         
         &::before {
             font-family: Arial, Helvetica, sans-serif;
@@ -144,6 +150,10 @@
                 height: 4rem;
                 width: 4rem;
             }
+            @include breakpoint(med) {
+                height: 5rem;
+                width: 5rem;
+            }
         }
         #image1 {
             background-image: url("https://images.pexels.com/photos/2078265/pexels-photo-2078265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");   
@@ -156,6 +166,9 @@
             font-size: 1.5rem;
 
             @include breakpoint(tablet) {
+                font-size: 1rem;
+            }
+            @include breakpoint(shmedium) {
                 font-size: 1rem;
             }
 

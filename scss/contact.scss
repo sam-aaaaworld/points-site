@@ -12,7 +12,6 @@
         border: solid black 1px;
         background-color: white;
         width: 35%;
-        min-width: 500px;
         height: 70%;
 
         display: flex;
@@ -24,6 +23,12 @@
                       -31px 29px #000000,
                       -31px 31px #000000,
                       -29px 31px #000000;
+
+        @include breakpoint(tablet) {width: 100%;}
+        @include breakpoint(med) {
+            width: 80%;
+            max-width: 600px;
+        }
         
         h2 {
             font-weight: 400;
