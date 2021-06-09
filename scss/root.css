@@ -848,9 +848,8 @@ header .circle2 {
 
 footer {
   width: 100%;
-  height: 45vh;
+  height: fit-content;
   background-color: #455A64;
-  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
