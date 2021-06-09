@@ -4,8 +4,8 @@ header {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 1.5rem 4rem 4rem 4rem;
+    justify-content: center;
+    padding: 4rem 4rem 4rem 4rem;
 
     @include breakpoint(tablet) { 
         padding: 2rem;

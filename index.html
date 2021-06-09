@@ -16,34 +16,7 @@
 
     <!-- HEADER -->
     <header class="scroll-snap-target">
-        <section class="top-bar">
-            <div class="top-bar_branding-container">
-                <img src="assets/final-logo.png" alt="UEarnPoints">
-            </div>
-
-            <nav id="site-nav">
-              <nav id="horizontal-nav">
-                  <a href="#explainer-block">About</a>
-                  <a href="#testimonial-block">Testimonials</a>
-                  <a href="#contact-block">Contact</a>
-                  <!-- <a href="https://uearnpoints.com">Login</a>
-                  <a id="nav-signup" href="https://www.uearnpoints.com/p/newaccount">Sign Up</a> -->
-              </nav>
-
-              <nav id="vertical-nav" >
-                <a href="#explainer-block">About</a>
-                <a href="#testimonial-block">Testimonials</a>
-                <a href="#contact-block">Contact</a>
-                <!-- <a href="https://uearnpoints.com">Login</a>
-                <a id="nav-signup" href="https://www.uearnpoints.com/p/newaccount">Sign Up</a> -->
-              </nav>
-                
-              <i id="nav-toggle" class="fa fa-bars"></i>
-            </div>
-
-
-
-        </section>
+        
 
         <section id="header-content">
           <div id="header-content_cta">
@@ -63,10 +36,11 @@
     </header> 
 
     <section id="video">
-      <iframe 
-        src="https://www.youtube.com/embed/L9KGn4Iah6I" 
-        frameborder="0" 
-        ></iframe>
+      <style></style>
+      <div class='embed-container'>
+        <iframe src='https://www.youtube.com/embed/L9KGn4Iah6I' frameborder='0' allowfullscreen>
+        </iframe>
+      </div>
     </section>
   
     <!-- EXPLAINER -->
@@ -178,17 +152,13 @@
     <footer class="scroll-snap-target">
       <section class="footer-content_container">
         <img id="footerLogo" src="assets/logo.png" alt="UEarnPoints">
-        <!-- <div class="footer-content_container--branding">
-        </div> -->
 
         <nav>
           <a href="#explainer-block">How it Works</a>
           <a href="#contact-block">Contact</a>
+          <a href="#testimonial-block">Testimonials</a>
         </nav>
-        <!-- <nav>
-          <a href="https://www.uearnpoints.com/p/newaccount">Sign Up</a>
-          <a href="https://www.uearnpoints.com">Login</a>
-        </nav> -->
+
       </section>
 
       <section id="bottom_bar">
@@ -197,35 +167,5 @@
       </section>
 
     </footer>
-
-    <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v9.0'
-        });
-      };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-    <!-- Your Chat Plugin code -->
-    <div class="fb-customerchat"
-      attribution="setup_tool"
-      page_id="346879676472278"
-      theme_color="#363537"
-      logged_in_greeting="Hi! Thank you for coming to UEarnPoints, how can we help you?"
-      logged_out_greeting="Hi! Thank you for coming to UEarnPoints, how can we help you?">
-    </div>
-
-
-
   </body>
 </html>

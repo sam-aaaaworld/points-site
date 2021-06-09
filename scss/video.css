@@ -1,12 +1,19 @@
-div#video {
+#video {
+  height: 100vh;
+  margin: 0 auto;
+  margin-top: 10vh;
+  width: 75%;
+}
+
+.embed-container {
   position: relative;
-  padding-bottom: 10rem 20% 56.25%;
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   max-width: 100%;
 }
 
-div#video iframe {
+.embed-container iframe, .embed-container object, .embed-container embed {
   position: absolute;
   top: 0;
   left: 0;

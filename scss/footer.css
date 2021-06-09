@@ -1,0 +1,115 @@
+footer {
+  width: 100%;
+  height: 45vh;
+  background-color: #455A64;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 750px) {
+  footer {
+    height: 100%;
+    padding-top: 2.5rem;
+  }
+}
+
+footer .footer-content_container {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+
+@media (max-width: 750px) {
+  footer .footer-content_container {
+    align-items: flex-start;
+    height: 100%;
+    font-size: .7rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+footer .footer-content_container #footerLogo {
+  object-fit: contain;
+}
+
+@media (max-width: 1500px) and (min-width: 750px) {
+  footer .footer-content_container #footerLogo {
+    width: 10rem;
+  }
+}
+
+@media (max-width: 750px) {
+  footer .footer-content_container #footerLogo {
+    max-width: 60%;
+    margin-bottom: 3rem;
+  }
+}
+
+footer .footer-content_container nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+footer .footer-content_container nav a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .footer-content_container nav a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 750px) {
+  footer .footer-content_container nav a {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+footer #bottom_bar {
+  width: 100%;
+  height: 2rem;
+  background-color: #222229;
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: white;
+  padding: 0 3rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 750px) {
+  footer #bottom_bar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    height: 100%;
+  }
+}
+
+footer #bottom_bar p {
+  margin-bottom: .3rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 750px) {
+  footer #bottom_bar p {
+    font-size: .7rem;
+  }
+}
+
+@media (max-width: 1500px) and (min-width: 750px) {
+  footer #bottom_bar p {
+    font-size: .7rem;
+  }
+}
